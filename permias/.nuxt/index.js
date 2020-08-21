@@ -12,6 +12,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+import nuxt_plugin_plugin_721c3d25 from 'nuxt_plugin_plugin_721c3d25' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_dfdafe70 from 'nuxt_plugin_axios_dfdafe70' // Source: .\\axios.js (mode: 'all')
+
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
 
@@ -49,7 +52,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"meta":[],"link":[],"style":[],"script":[]},
+    head: {"title":"Permias Penn State","meta":[{"charset":"utf-8"}],"link":[{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;700;800&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Funpkg.com\u002Fflickity@2\u002Fdist\u002Fflickity.min.css"}],"script":[{"src":"https:\u002F\u002Fcode.jquery.com\u002Fjquery-3.4.1.min.js"},{"src":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fgsap\u002F3.5.0\u002Fgsap.min.js"},{"src":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fgsap\u002F3.5.0\u002FScrollTrigger.min.js"},{"src":"https:\u002F\u002Funpkg.com\u002Fflickity@2\u002Fdist\u002Fflickity.pkgd.min.js"}],"style":[]},
 
     router,
     nuxt: {
@@ -162,6 +165,14 @@ async function createApp(ssrContext, config = {}) {
     }
   }
   // Plugin execution
+
+  if (typeof nuxt_plugin_plugin_721c3d25 === 'function') {
+    await nuxt_plugin_plugin_721c3d25(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_dfdafe70 === 'function') {
+    await nuxt_plugin_axios_dfdafe70(app.context, inject)
+  }
 
   // Lock enablePreview in context
   if (process.static && process.client) {

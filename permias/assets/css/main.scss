@@ -1,0 +1,16 @@
+$blue-accent: #2878D4;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font-700($font) {
+  font-family: $font, sans-serif;
+  font-weight: 700;
+}
+
+@mixin font-400($font) {
+  font-family: $font, sans-serif;
+  font-weight: 400;
+}
