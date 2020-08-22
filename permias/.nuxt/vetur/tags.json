@@ -1,0 +1,20 @@
+{
+  "Navbar": {
+    "description": "Auto imported from components/Navbar.vue"
+  },
+  "LazyNavbar": {
+    "description": "Auto imported from components/Navbar.vue"
+  },
+  "Officer": {
+    "description": "Auto imported from components/Officer.vue"
+  },
+  "LazyOfficer": {
+    "description": "Auto imported from components/Officer.vue"
+  },
+  "Officers": {
+    "description": "Auto imported from components/Officers.vue"
+  },
+  "LazyOfficers": {
+    "description": "Auto imported from components/Officers.vue"
+  }
+}
