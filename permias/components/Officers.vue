@@ -1,9 +1,7 @@
 <template>
     <section class="officer-profiles">
         <template v-for="officer in officerList">
-            <div :key="officer.id">
-                <Officer :officer="officer" />
-            </div>
+            <Officer :officer="officer" :key="officer.id" />
         </template>
     </section>
 </template>
@@ -15,10 +13,10 @@
         components: {
             Officer
         },
-        async asyncData({ $axios, params }) {
+        async asyncData({ $axios }) {
             try {
                 let officerList = await $axios.$get('/officers/');
-                console.log("got list");
+                console.log(officerList);
                 return { officerList };
             } catch(e) {
                 return { officerList: [] };

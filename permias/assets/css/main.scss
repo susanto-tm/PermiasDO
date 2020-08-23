@@ -14,3 +14,8 @@ body {
   font-family: $font, sans-serif;
   font-weight: 400;
 }
+
+@mixin profilePosSize($pos, $size) {
+  background-position: $pos !important;
+  background-size: $size !important;
+}

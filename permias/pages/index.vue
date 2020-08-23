@@ -4,11 +4,20 @@
     <section id="about"></section>
     <section id="gallery"></section>
     <section id="officers">
-        <template v-for="officer in officerList">
-          <div :key="officer.id">
-            <Officer :officer="officer" />
-          </div>
-        </template>
+        <div class="officers-container">
+            <div class="intro-officers">
+                <div class="wrapper">
+                    <h1>Meet Our</h1>
+                    <h1>Executive Team</h1>
+                    <span></span>
+                </div>
+            </div>
+            <div class="officers-gallery" ref="officerProfiles">
+                <template v-for="officer in officerList">
+                    <Officer :key="officer.id" :officer="officer" />
+                </template>
+            </div>
+        </div>
     </section>
     <section id="freshman-guide"></section>
     <section id="contact"></section>
@@ -17,19 +26,18 @@
 
 <script>
   import Navbar from "@/components/Navbar";
-  // import Officers from "@/components/Officers"
+  import Officers from "@/components/Officers"
   import Officer from "@/components/Officer";
 
   export default {
     components: {
       Navbar,
-      Officer
+      Officer,
       // Officers
     },
     async asyncData({ $axios }) {
       try {
         let officerList = await $axios.$get('/officers/');
-        console.log(officerList);
         return { officerList };
       } catch(e) {
         return { officerList: [] }
@@ -37,6 +45,15 @@
     },
     data() {
       return {officerList: [] }
+    },
+    mounted() {
+        let officersGallery = $(this.$refs["officerProfiles"]);
+        officersGallery.flickity({
+            wrapAround: true,
+            freeScroll: true,
+            pageDots: false,
+            prevNextButtons: false,
+        })
     }
   }
 </script>
@@ -45,6 +62,51 @@
   .container {
     width: 100%;
     min-height: 100vh;
+    overflow: auto;
+  }
+  #officers {
+      background-color: #000;
+
+      .intro-officers {
+          height: 15%;
+          width: 100%;
+          padding-top: 60px;
+
+          .officers-container {
+              height: 90%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+          }
+
+          .wrapper {
+              padding: 0 50px;
+              display: flex;
+              flex-direction: column;
+          }
+
+          h1 {
+              color: #fff;
+              margin: 0;
+              font-size: 60px;
+              @include font-700("Lato");
+          }
+
+          span {
+              background-color: #fff;
+              height: 5px;
+              width: 380px;
+          }
+      }
+
+      .officers-gallery {
+          padding-top: 60px;
+      }
+
+  }
+  #about {
+      background-color: #fff;
+      height: 100vh;
   }
 </style>
 

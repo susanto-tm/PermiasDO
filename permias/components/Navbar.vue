@@ -2,7 +2,7 @@
     <nav id="nav" class="navbar">
         <div class="nav-container">
             <div class="menu-container" ref="menuContainer" data-opened="false" @click="icon_open">
-                <div class="menu icon">
+                <div class="menu icon" data-background-blue="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -37,29 +37,31 @@
 </template>
 
 <script>
-    import { menu } from "../assets/scripts/nav.js"
+    import { menu, menuIconColor } from "../assets/scripts/nav.js"
     export default {
         name: "Header",
         mounted() {
           this.tlNav = gsap.timeline({paused: true});
           this.tlNav.from($('.option', this.$refs["openedMenu"]), {y: 20, duration: 1.2, opacity: 0, stagger: 0.1, ease: 'power4.inOut'});
+          let menuIcon = $('.menu.icon', this.$refs["menuContainer"]);
+          $(window).scroll(function() {
+              menuIconColor(menuIcon);
+          });
         },
         methods: {
             icon_open($event) {
                 menu(this.$refs, this.tlNav);
             }
-        }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
-    .lock-scroll {
-        overflow: hidden;
-    }
     .navbar#nav {
         width: 100%;
         height: 120px;
         position: fixed;
+        z-index: 99;
 
         .nav-container {
             width: 100%;
@@ -185,6 +187,9 @@
     .icon-color {
         background-color: #fff !important;
         transition: background-color 200ms ease;
+    }
+    .lock-scroll {
+        overflow: hidden;
     }
 
 </style>

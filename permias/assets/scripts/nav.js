@@ -4,7 +4,7 @@ function openMenu(menu_icon, menu_opened) {
        $('span', menu_icon).addClass('icon-color').dequeue();
        $('span:nth-child(1), span:nth-child(3)', menu_icon).addClass('combine').dequeue();
     });
-    $('html').addClass('lock-scroll');
+    $('html').css('overflow', 'hidden');
 }
 
 function closeMenu(menu_icon, menu_opened, clicked) {
@@ -15,7 +15,7 @@ function closeMenu(menu_icon, menu_opened, clicked) {
        menu_opened.removeClass('menu-bg').dequeue();
        $('span', menu_icon).removeClass('icon-color').dequeue();
     });
-    $('html').removeClass('lock-scroll');
+    $('html').css('overflow', 'auto');
 }
 
 function hoverItem(menu_opened) {
@@ -26,6 +26,29 @@ function hoverItem(menu_opened) {
         $(this).parent().siblings().stop().fadeTo('slow', 1);
         $(this).siblings().stop().fadeTo('slow', 0);
     });
+}
+
+function elementInViewport(el) {
+    let top_screen = $(window).scrollTop();
+    let top_element = el.offset().top;
+    let bottom_element = top_element + el.innerHeight();
+
+    if ((top_screen >= top_element) && (top_screen <= bottom_element)) {
+        return true;
+    }
+}
+
+function menuIconColor(menu_icon) {
+    let diffBg = ['officers'];
+
+    for (let el of diffBg) {
+        if (elementInViewport($("#" + el))) {
+            console.log("blue");
+            menu_icon.attr('data-background-blue', 'true');
+        } else {
+            menu_icon.attr('data-background-blue', 'false');
+        }
+    }
 }
 
 function menu(refs, tlNav) {
@@ -48,7 +71,6 @@ function menu(refs, tlNav) {
         closeMenu(menuIcon, menuOpen, false);
     }
     hoverItem(menuOpen);
-
 }
 
-export {menu};
+export { menu, menuIconColor };
