@@ -2,7 +2,9 @@
   <div class="container">
     <Navbar />
     <section id="about"></section>
-    <section id="gallery"></section>
+    <section id="gallery">
+        <Gallery :gallery="galleryList" />
+    </section>
     <section id="officers">
         <div class="officers-container">
             <div class="intro-officers">
@@ -28,23 +30,25 @@
   import Navbar from "@/components/Navbar";
   import Officers from "@/components/Officers"
   import Officer from "@/components/Officer";
+  import Gallery from "@/components/Gallery";
 
   export default {
     components: {
       Navbar,
       Officer,
-      // Officers
+      Gallery
     },
     async asyncData({ $axios }) {
       try {
         let officerList = await $axios.$get('/officers/');
-        return { officerList };
+        let galleryList = await $axios.$get('/gallery/');
+        return { officerList, galleryList };
       } catch(e) {
-        return { officerList: [] }
+        return { officerList: [], galleryList: [] }
       }
     },
     data() {
-      return {officerList: [] }
+      return {officerList: [], galleryList: [] }
     },
     mounted() {
         let officersGallery = $(this.$refs["officerProfiles"]);

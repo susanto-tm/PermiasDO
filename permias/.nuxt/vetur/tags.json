@@ -1,4 +1,10 @@
 {
+  "Gallery": {
+    "description": "Auto imported from components/Gallery.vue"
+  },
+  "LazyGallery": {
+    "description": "Auto imported from components/Gallery.vue"
+  },
   "Navbar": {
     "description": "Auto imported from components/Navbar.vue"
   },

@@ -19,7 +19,7 @@ class GalleryEventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = GalleryEvent
-        fields = '__all__'
+        fields = ('event_id', 'name', 'description', 'date', 'images')
 
     def get_images(self, obj):
         images_data = ImageUpload.objects.filter(event_id=obj.event_id)  # get all image_data under the same event key
