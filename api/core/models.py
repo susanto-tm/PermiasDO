@@ -16,7 +16,7 @@ class Officers(models.Model):
 
 class ImageUpload(models.Model):
     image_id = models.CharField(max_length=100)
-    event = models.ForeignKey('GalleryEvent', null=True, on_delete=models.CASCADE)
+    event_id = models.ForeignKey('GalleryEvent', null=True, on_delete=models.CASCADE)
     image = models.ImageField()
 
     def __str__(self):
@@ -24,19 +24,12 @@ class ImageUpload(models.Model):
 
 
 class GalleryEvent(models.Model):
+    event_id = models.CharField(max_length=100, null=False, primary_key=True)
     name = models.CharField(max_length=200, blank=False)
     description = models.TextField(blank=True)
     date = models.DateField(default=datetime.date.today)
-    # images = models.ManyToManyField(ImageUpload)
 
     def __str__(self):
-        return self.name
+        return self.event_id
 
-
-# class Event(models.Model):
-#     event_group = models.ForeignKey(GalleryEvent, related_name="event_id", null=True, on_delete=models.CASCADE)
-#     images = models.ManyToManyField(ImageUpload)
-#
-#     def __str__(self):
-#         return self.event_group
 
