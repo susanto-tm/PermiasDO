@@ -5,11 +5,11 @@
   "LazyGallery": {
     "description": "Auto imported from components/Gallery.vue"
   },
-  "Navbar": {
-    "description": "Auto imported from components/Navbar.vue"
+  "NavbarHamburger": {
+    "description": "Auto imported from components/NavbarHamburger.vue"
   },
-  "LazyNavbar": {
-    "description": "Auto imported from components/Navbar.vue"
+  "LazyNavbarHamburger": {
+    "description": "Auto imported from components/NavbarHamburger.vue"
   },
   "Officer": {
     "description": "Auto imported from components/Officer.vue"
@@ -22,5 +22,47 @@
   },
   "LazyOfficers": {
     "description": "Auto imported from components/Officers.vue"
+  },
+  "ArrowPage": {
+    "description": "Auto imported from components/icons/ArrowPage.vue"
+  },
+  "LazyArrowPage": {
+    "description": "Auto imported from components/icons/ArrowPage.vue"
+  },
+  "ScrollDown": {
+    "description": "Auto imported from components/icons/ScrollDown.vue"
+  },
+  "LazyScrollDown": {
+    "description": "Auto imported from components/icons/ScrollDown.vue"
+  },
+  "Navbar": {
+    "description": "Auto imported from components/navigation/Navbar.vue"
+  },
+  "LazyNavbar": {
+    "description": "Auto imported from components/navigation/Navbar.vue"
+  },
+  "SideNavbar": {
+    "description": "Auto imported from components/navigation/SideNavbar.vue"
+  },
+  "LazySideNavbar": {
+    "description": "Auto imported from components/navigation/SideNavbar.vue"
+  },
+  "OldGallery": {
+    "description": "Auto imported from components/old-components/OldGallery.vue"
+  },
+  "LazyOldGallery": {
+    "description": "Auto imported from components/old-components/OldGallery.vue"
+  },
+  "OldOfficer": {
+    "description": "Auto imported from components/old-components/OldOfficer.vue"
+  },
+  "LazyOldOfficer": {
+    "description": "Auto imported from components/old-components/OldOfficer.vue"
+  },
+  "DefaultText": {
+    "description": "Auto imported from components/text/DefaultText.vue"
+  },
+  "LazyDefaultText": {
+    "description": "Auto imported from components/text/DefaultText.vue"
   }
 }

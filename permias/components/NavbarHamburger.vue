@@ -37,9 +37,9 @@
 </template>
 
 <script>
-    import { menu, menuIconColor } from "../assets/scripts/nav.js"
+    import { menu, menuIconColor } from "assets/scripts/nav"
     export default {
-        name: "Header",
+        name: "NavbarHamburger",
         mounted() {
           this.tlNav = gsap.timeline({paused: true});
           this.tlNav.from($('.option', this.$refs["openedMenu"]), {y: 20, duration: 1.2, opacity: 0, stagger: 0.1, ease: 'power4.inOut'});

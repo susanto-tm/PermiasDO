@@ -1,16 +1,13 @@
 <template>
 
-
 </template>
 
 <script>
 export default {
-  name: "Gallery"
+name: "freshman-guide"
 }
-
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
 
 </style>
