@@ -27,23 +27,15 @@ export default {
     Navbar,
     ArrowPage,
     ScrollDown
-  },
-  data() {
-    return { m: "hello" };
-  },
-  mounted() {
-    this.m = "hello";
   }
-
 }
 </script>
 
 <style lang="scss">
   .container {
     height: 100vh;
-    background-color: $background;
+    background-color: $offBlack;
   }
-
 
 
 </style>

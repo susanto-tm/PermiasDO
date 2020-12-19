@@ -4,7 +4,7 @@
       <div class="menu-items">
         <div class="option">
           <p class="item">
-            <NuxtLink class="nav-link active" to="/about-us">About Us</NuxtLink>
+            <NuxtLink class="nav-link" to="/about-us">About Us</NuxtLink>
           </p>
         </div>
         <div class="option">
@@ -24,7 +24,7 @@
         </div>
         <div class="option">
           <p class="item">
-            <NuxtLink class="nav-link" to="">Contact</NuxtLink>
+            <NuxtLink class="nav-link" to="/contact-us">Contact</NuxtLink>
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@ export default {
           text-decoration: none;
           color: #fff;
 
-          &.active {
+          &.nuxt-link-active {
             border-bottom: 5px solid $blue-accent;
           }
 

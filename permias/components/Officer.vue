@@ -1,27 +1,26 @@
 <template>
-  <div :class="['officer ' + officer.rank.substring(0, 4).toLowerCase()]">
+  <div class="officer" :class="mode === 'officerBio' ? 'bio' : 'overview'">
     <div class="officer-container">
-      <NuxtLink class="view-bio-link" @click.native="updateSlide" to="/officers/all-officers">
         <div class="officer-image-container">
           <h1 class="img" :style="{backgroundImage: 'url(' + officer.picture + ')'}"></h1>
         </div>
-        <div class="view-bio-container">
-          <h2 class="view-bio">View Bio</h2>
+        <div class="view-bio-container" v-if="mode === 'overview'">
+          <NuxtLink to="/officers/all-officers" @click.native="updateSlide(officer.id - 1)" class="view-bio">View Bio</NuxtLink>
         </div>
-      </NuxtLink>
     </div>
   </div>
-
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
   name: "Officer",
-  props: ['officer'],
+  props: ['mode', 'officer'],
   methods: {
-    updateSlide() {
-      this.$store.commit('updateOfficerSlide', this.officer.id);
-    }
+    ...mapMutations ({
+      updateSlide: 'setOfficerSlide'
+    })
   },
   mounted() {
     $('.view-bio-container').hover(function() {
@@ -34,16 +33,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .officer {
+  .officer.overview {
     width: 573px;
     height: 645px;
+    margin-right: 20px;
+  }
+  .officer.bio {
+    width: auto;
+    height: 100vh;
   }
 
   .officer-container {
     width: 100%;
     height: 100%;
     position: relative;
-
   }
 
   .officer-image-container {
@@ -55,11 +58,11 @@ export default {
       width: 100%;
       background-size: contain;
       background-repeat: no-repeat;
+      margin: 0;
     }
   }
 
   .view-bio-link {
-    z-index: 99;
     width: 100%;
     height: 100%;
   }
@@ -76,15 +79,15 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 
     .view-bio {
       text-decoration: none;
-      -webkit-text-stroke: 1pt white;
+      -webkit-text-stroke: 1.5pt white;
       @include font-700("Montserrat");
       font-size: 58px;
       color: transparent;
       text-transform: uppercase;
+      cursor: pointer;
     }
 
   }

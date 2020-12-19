@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import NavbarHamburger from "@/components/NavbarHamburger";
+import NavbarHamburger from "@/components/old-components/NavbarHamburger";
 import OldOfficer from "@/components/old-components/OldOfficer";
 import OldGallery from "@/components/old-components/OldGallery";
 

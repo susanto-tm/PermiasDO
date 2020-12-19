@@ -49,6 +49,7 @@ export default {
       @include font-700("Montserrat");
       font-size: 24px;
       margin: 18px 0 0;
+      color: transparent;
     }
   }
 

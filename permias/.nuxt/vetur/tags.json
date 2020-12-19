@@ -5,12 +5,6 @@
   "LazyGallery": {
     "description": "Auto imported from components/Gallery.vue"
   },
-  "NavbarHamburger": {
-    "description": "Auto imported from components/NavbarHamburger.vue"
-  },
-  "LazyNavbarHamburger": {
-    "description": "Auto imported from components/NavbarHamburger.vue"
-  },
   "Officer": {
     "description": "Auto imported from components/Officer.vue"
   },
@@ -35,6 +29,12 @@
   "LazyScrollDown": {
     "description": "Auto imported from components/icons/ScrollDown.vue"
   },
+  "SlideNavigation": {
+    "description": "Auto imported from components/icons/SlideNavigation.vue"
+  },
+  "LazySlideNavigation": {
+    "description": "Auto imported from components/icons/SlideNavigation.vue"
+  },
   "Navbar": {
     "description": "Auto imported from components/navigation/Navbar.vue"
   },
@@ -47,6 +47,24 @@
   "LazySideNavbar": {
     "description": "Auto imported from components/navigation/SideNavbar.vue"
   },
+  "DefaultText": {
+    "description": "Auto imported from components/text/DefaultText.vue"
+  },
+  "LazyDefaultText": {
+    "description": "Auto imported from components/text/DefaultText.vue"
+  },
+  "OfficerBio": {
+    "description": "Auto imported from components/text/OfficerBio.vue"
+  },
+  "LazyOfficerBio": {
+    "description": "Auto imported from components/text/OfficerBio.vue"
+  },
+  "NavbarHamburger": {
+    "description": "Auto imported from components/old-components/NavbarHamburger.vue"
+  },
+  "LazyNavbarHamburger": {
+    "description": "Auto imported from components/old-components/NavbarHamburger.vue"
+  },
   "OldGallery": {
     "description": "Auto imported from components/old-components/OldGallery.vue"
   },
@@ -58,11 +76,5 @@
   },
   "LazyOldOfficer": {
     "description": "Auto imported from components/old-components/OldOfficer.vue"
-  },
-  "DefaultText": {
-    "description": "Auto imported from components/text/DefaultText.vue"
-  },
-  "LazyDefaultText": {
-    "description": "Auto imported from components/text/DefaultText.vue"
   }
 }

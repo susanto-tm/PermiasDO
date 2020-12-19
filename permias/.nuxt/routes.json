@@ -3,70 +3,60 @@
     "name": "about-us",
     "path": "/about-us",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\about-us.vue",
-    "chunkName": "pages/about-us",
-    "_name": "_0fc67c50"
+    "chunkName": "pages/about-us"
   },
   {
     "name": "contact-us",
     "path": "/contact-us",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\contact-us.vue",
-    "chunkName": "pages/contact-us",
-    "_name": "_3ae9b1dd"
+    "chunkName": "pages/contact-us"
   },
   {
     "name": "freshman-guide",
     "path": "/freshman-guide",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\freshman-guide.vue",
-    "chunkName": "pages/freshman-guide",
-    "_name": "_759520cd"
+    "chunkName": "pages/freshman-guide"
   },
   {
     "name": "gallery",
     "path": "/gallery",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\gallery.vue",
-    "chunkName": "pages/gallery",
-    "_name": "_66ea9c60"
+    "chunkName": "pages/gallery"
   },
   {
     "name": "officers",
     "path": "/officers",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\officers\\\\index.vue",
-    "chunkName": "pages/officers/index",
-    "_name": "_43cdf89a"
+    "chunkName": "pages/officers/index"
   },
   {
     "name": "origHome",
     "path": "/origHome",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\origHome.vue",
-    "chunkName": "pages/origHome",
-    "_name": "_a2e5059c"
+    "chunkName": "pages/origHome"
   },
   {
     "name": "test",
     "path": "/test",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\test.vue",
-    "chunkName": "pages/test",
-    "_name": "_5dd8f704"
+    "chunkName": "pages/test"
   },
   {
     "name": "test2",
     "path": "/test2",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\test2.vue",
-    "chunkName": "pages/test2",
-    "_name": "_5d5d92de"
+    "chunkName": "pages/test2"
   },
   {
     "name": "officers-all-officers",
     "path": "/officers/all-officers",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\officers\\\\all-officers.vue",
-    "chunkName": "pages/officers/all-officers",
-    "_name": "_18c1dd58"
+    "chunkName": "pages/officers/all-officers"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\timothy\\\\PycharmProjects\\\\PermiasDO\\\\permias\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_761ba4d0"
+    "chunkName": "pages/index"
   }
 ]

@@ -1,17 +1,25 @@
 <template>
-  <div class="officers">
-    <template v-for="officer in officerList">
-      <Officer :key="officer.id" :officer="officer" />
-    </template>
+  <div class="container">
+    <Navbar active="" />
+    <div id="gallery">
+      <Gallery mode="officers" setting="overview" :gallery="officerList" />
+    </div>
   </div>
 </template>
 
 <script>
 import Officer from "@/components/Officer";
+import Gallery from "@/components/Gallery";
+import SlideNavigation from "@/components/icons/SlideNavigation";
+import Navbar from "@/components/navigation/Navbar";
+
 export default {
   name: "index",
   components: {
-    Officer
+    Navbar,
+    SlideNavigation,
+    Officer,
+    Gallery
   },
   async asyncData({ $axios }) {
     try {
@@ -28,6 +36,9 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .container {
+    background-color: $offBlack;
+    height: 100vh;
+  }
 </style>

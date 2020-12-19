@@ -34,6 +34,14 @@ export default {
         scss: './assets/css/main.scss'
     },
 
+    loaders: {
+      vue: {
+          compilerOptions: {
+              preserveWhitespace: false
+          }
+      }
+    },
+
     axios: {
         baseURL: "http://localhost:8000/api"
     }
