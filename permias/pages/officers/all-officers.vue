@@ -84,7 +84,7 @@ export default {
     .back-link {
       position: absolute;
       top: 26px;
-      right: 35px;
+      right: 45px;
       text-decoration: none;
       color: transparent;
       -webkit-text-stroke: 1pt white;
