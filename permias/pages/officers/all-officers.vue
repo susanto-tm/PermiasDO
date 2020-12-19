@@ -4,6 +4,7 @@
       <Gallery mode="officers" setting="officerBio" :gallery="officerList" />
     </div>
     <div class="officer-bio-container">
+      <NuxtLink to="/officers" class="back-link">Back</NuxtLink>
       <OfficerBio class="officer-details" :officer="officerList[officerId]" />
       <div id="slide-navigation">
         <SlideNavigation />
@@ -30,8 +31,16 @@ export default {
       officerId: 'getOfficerSlide'
     })
   },
+  methods: {
+    enterBio() {
+      gsap.fromTo($('.officer-details'), {css: {opacity: 0}}, {css: {opacity: 1}, duration: 1.1, ease: 'power1.in'})
+    },
+    leaveBio() {
+      gsap.fromTo($('.officer-details'), {css: {opacity: 1}}, {css: {opacity: 0}, duration: 1, ease: 'power1.out'})
+    }
+  },
   mounted() {
-    console.log(this.$store.state.officerSlide);
+    this.enterBio();
   },
   async asyncData({ $axios }) {
     try {
@@ -43,6 +52,12 @@ export default {
   },
   data() {
     return { officerList: [] };
+  },
+  watch: {
+    '$store.state.updatingOfficer': function (newUpdate, oldUpdate) {
+      this.leaveBio();
+      this.enterBio();
+    }
   }
 }
 </script>
@@ -66,6 +81,17 @@ export default {
     padding-left: 51px;
     position: relative;
 
+    .back-link {
+      position: absolute;
+      top: 26px;
+      right: 35px;
+      text-decoration: none;
+      color: transparent;
+      -webkit-text-stroke: 1pt white;
+      @include font-700("Montserrat");
+      font-size: 30px;
+    }
+
     #slide-navigation {
       position: absolute;
       right: 78px;
@@ -74,6 +100,5 @@ export default {
     }
 
   }
-
 
 </style>

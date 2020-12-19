@@ -1,9 +1,9 @@
 <template>
-  <div class="bio-container">
-    <h1 class="rank">{{ officer.rank }}</h1>
-    <h1 class="name">{{ officer.first_name}} <span class="last-name">{{ officer.last_name }}</span></h1>
-    <p class="bio-stmt">{{ officer.profile }}</p>
-  </div>
+    <div class="bio-container">
+      <h1 class="rank">{{ officer.rank }}</h1>
+      <h1 class="name">{{ officer.first_name}} <span class="last-name">{{ officer.last_name }}</span></h1>
+      <p class="bio-stmt">{{ officer.profile }}</p>
+    </div>
 </template>
 
 <script>
@@ -55,4 +55,5 @@ export default {
       max-width: 455px;
     }
   }
+
 </style>

@@ -68,7 +68,6 @@ export default {
   },
   watch: {
     '$store.state.updatingOfficer': function(newOfficer, oldOfficer) {
-      console.log("updating");
       if (this.updatingOfficer) {
         this.updateSlide();
         this.updating(false);
