@@ -31,7 +31,7 @@ export default {
   props: ['officerId'],
   computed: {
     ...mapGetters ({
-      slideCount: 'getOfficerSlide',
+      slideCount: '',
       maxOfficers: 'getMaxOfficers',
       updatingOfficer: 'getUpdatingOfficer'
     })

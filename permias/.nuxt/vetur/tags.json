@@ -47,18 +47,6 @@
   "LazySideNavbar": {
     "description": "Auto imported from components/navigation/SideNavbar.vue"
   },
-  "DefaultText": {
-    "description": "Auto imported from components/text/DefaultText.vue"
-  },
-  "LazyDefaultText": {
-    "description": "Auto imported from components/text/DefaultText.vue"
-  },
-  "OfficerBio": {
-    "description": "Auto imported from components/text/OfficerBio.vue"
-  },
-  "LazyOfficerBio": {
-    "description": "Auto imported from components/text/OfficerBio.vue"
-  },
   "NavbarHamburger": {
     "description": "Auto imported from components/old-components/NavbarHamburger.vue"
   },
@@ -76,5 +64,17 @@
   },
   "LazyOldOfficer": {
     "description": "Auto imported from components/old-components/OldOfficer.vue"
+  },
+  "DefaultText": {
+    "description": "Auto imported from components/text/DefaultText.vue"
+  },
+  "LazyDefaultText": {
+    "description": "Auto imported from components/text/DefaultText.vue"
+  },
+  "OfficerBio": {
+    "description": "Auto imported from components/text/OfficerBio.vue"
+  },
+  "LazyOfficerBio": {
+    "description": "Auto imported from components/text/OfficerBio.vue"
   }
 }

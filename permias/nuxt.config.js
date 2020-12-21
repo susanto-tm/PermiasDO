@@ -21,11 +21,12 @@ export default {
     components: true,
 
     buildModules: [
-        '@nuxtjs/style-resources',
+
     ],
 
     modules: [
-      '@nuxtjs/axios'
+        '@nuxtjs/axios',
+        '@nuxtjs/style-resources',
     ],
 
     css: ['~/assets/css/main.scss'],
